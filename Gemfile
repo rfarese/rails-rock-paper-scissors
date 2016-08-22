@@ -16,13 +16,9 @@ group :development, :test do
   gem 'shoulda'
   gem 'valid_attribute'
   gem 'database_cleaner'
-  gem 'shoulda-matchers', require: false 
+  gem 'shoulda-matchers', require: false
+  gem 'dotenv-rails'
 end
-
-
-# gem 'jasmine'
-# gem 'poltergeist'
-# gem "dotenv-rails"
 
 group :test do
   gem 'launchy', require: false
