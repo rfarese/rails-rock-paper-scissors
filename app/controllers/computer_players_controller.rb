@@ -1,0 +1,3 @@
+class ComputerPlayersController < ApplicationController
+
+end 
