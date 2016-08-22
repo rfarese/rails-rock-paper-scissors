@@ -1,2 +1,3 @@
-class GameRound < ActiveRecord::Base 
+class GameRound < ActiveRecord::Base
+  belongs_to :game
 end
