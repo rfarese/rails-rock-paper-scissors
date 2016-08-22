@@ -11,16 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160822180802) do
+ActiveRecord::Schema.define(version: 20160822221828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "games", force: :cascade do |t|
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
     t.string   "email",                  default: "", null: false
-    t.integer  "wins",                   default: 0,  null: false
-    t.integer  "games",                  default: 0,  null: false
+    t.integer  "games_won",              default: 0,  null: false
+    t.integer  "games_played",           default: 0,  null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -32,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160822180802) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "guess"
+    t.integer  "game_round_wins"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
