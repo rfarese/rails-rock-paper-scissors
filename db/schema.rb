@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823002723) do
+ActiveRecord::Schema.define(version: 20160823134130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "computer_players", force: :cascade do |t|
-    t.integer "game_round_wins"
+    t.integer "game_round_wins", default: 0, null: false
   end
 
   create_table "game_rounds", force: :cascade do |t|
@@ -46,8 +46,8 @@ ActiveRecord::Schema.define(version: 20160823002723) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "guess"
-    t.integer  "game_round_wins"
+    t.string   "guess",                  default: "", null: false
+    t.integer  "game_round_wins",        default: 0,  null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
