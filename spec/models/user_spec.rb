@@ -2,8 +2,11 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   it { should have_valid(:name).when("Bobby", "Sarah")}
-  it { should have_valid(:wins).when(0, 1, 2, 50) }
-  it { should have_valid(:games).when(0, 1, 2, 50) }
+  it { should have_valid(:games_won).when(0, 1, 2, 50) }
+  it { should have_valid(:games_played).when(0, 1, 2, 50) }
+  it { should have_valid(:game_round_wins).when(0, 1, 2) }
+  it { should have_valid(:guess).when("rock", "paper", "scissors") }
+
   it { should have_valid(:email).when("email@yahoo.com", "rfarese@gmail.com") }
   it { should_not have_valid(:email).when(nil, "", "userMan", "uManDude.com", "@com") }
 
