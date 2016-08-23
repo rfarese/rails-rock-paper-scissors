@@ -36,11 +36,4 @@ class GamesController < ApplicationController
     end
     render "show"
   end
-
-  # private
-  # def game_params
-  #   params_hash = params.require(:book).permit(:title, :author, :description, :cover_photo)
-  #   new_hash = { user_id: current_user.id }
-  #   new_hash.merge!(params_hash)
-  # end
 end
