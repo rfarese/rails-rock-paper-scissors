@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "User choices 'rock', 'paper', or 'scissors';", type: :feature do
+RSpec.feature "User creates first guess;", type: :feature do
   let(:user) { FactoryGirl.create(:user) }
 
   scenario "user chooses 'rock'" do
