@@ -1,7 +1,8 @@
 class ComputerPlayer < ActiveRecord::Base
   has_many :games
 
-  def guess
-    ["rock", "paper", "scissors"].sample
+  def new_guess
+    self.guess = ["rock", "paper", "scissors"].sample
+    self.save
   end
 end
