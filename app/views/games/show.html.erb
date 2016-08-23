@@ -1,0 +1,7 @@
+<h1>Games Show Page</h1>
+
+  <ul>
+    <li><%= link_to "Rock", game_path(id: @game.id, guess: "rock"), method: :patch %></li>
+    <li><%= link_to "Paper", game_path(id: @game.id, guess: "paper"), method: :patch %></li>
+    <li><%= link_to "Scissors", game_path(id: @game.id, guess: "scissors"), method: :patch %></li>
+  </ul>
