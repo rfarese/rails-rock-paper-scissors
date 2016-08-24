@@ -1,0 +1,18 @@
+<nav>
+  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <button type="button" data-toggle><%= image_tag('rock.svg', size: "75") %></button>
+    <div class="title-bar-title"></div>
+  </div>
+  <div class="top-bar" id="main-menu">
+    <ul class="menu nav-links">
+      <li id="icon"><%= image_tag('rock.svg', size: "75") %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+      <% else %>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

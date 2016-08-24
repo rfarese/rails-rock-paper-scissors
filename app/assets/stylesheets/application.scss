@@ -1,2 +1,63 @@
 // @import "*";
 
+// *= require foundation_and_overrides
+// *= require_self
+// *= require_tree .
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Lora';
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.home-page {
+  margin-bottom: 3em;
+  margin-top: 5em;
+}
+
+// custom large 1135px and up
+@media screen and (min-width: 70.9375em) {
+  #title {
+    font-size: 5rem;
+  }
+}
+
+// custom medium 641px to 1134px
+@media screen and (min-width: 56.1875em) and (max-width: 70.875em) {
+  #title {
+    font-size: 4rem;
+  }
+}
+
+
+// large screens only; 1025px and up
+@media screen and (min-width: 64.063em) {
+
+}
+
+// medium screens and up; 641px and up
+@media screen and (min-width: 40.063em) {
+  .new-game-link {
+    margin-left: 25%;
+  }
+}
+
+// medium screens only; 641px - 1024px
+@media screen and (min-width: 40.063em) and (max-width: 64em) {
+
+}
+
+// small screens only; 640px and under
+@media screen and (max-width: 40em) {
+  #icon {
+    display: none;
+  }
+
+  #title {
+    font-size: 2rem;
+  }
+}
