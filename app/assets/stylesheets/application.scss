@@ -36,17 +36,18 @@
   }
 }
 
-// custom medium 641px to 1134px
+// custom medium 899px to 1134px
 @media screen and (min-width: 56.1875em) and (max-width: 70.875em) {
   #title {
     font-size: 4rem;
   }
 }
 
-
 // large screens only; 1025px and up
 @media screen and (min-width: 64.063em) {
-
+  #game-menu-header {
+    margin-left: 2rem;
+  }
 }
 
 // medium screens and up; 641px and up
@@ -58,7 +59,9 @@
 
 // medium screens only; 641px - 1024px
 @media screen and (min-width: 40.063em) and (max-width: 64em) {
-
+  .game-menu li {
+    padding: 1.5em;
+  }
 }
 
 // small screens only; 640px and under
@@ -69,5 +72,18 @@
 
   #title {
     font-size: 2rem;
+  }
+
+  .game-menu li {
+    padding: .25em;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #game-menu-header {
+    padding-left: 1.5em;
   }
 }
