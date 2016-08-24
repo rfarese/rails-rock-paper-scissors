@@ -8,16 +8,10 @@
   <div class="small-2 columns"></div>
   <div class="small-8 small-centered columns">
     <ul class="menu game-menu">
-      <li><%= image_tag('rock.svg', size: "100") %></li>
-      <li><%= image_tag('notebook.svg', size: "100") %></li>
-      <li><%= image_tag('scissors.svg', size: "100") %></li>
+      <li><%= link_to image_tag('rock.svg', size: "100"), game_path(id: @game.id, guess: "rock"), id: "rock-link", method: :patch %></li>
+      <li><%= link_to image_tag('notebook.svg', size: "100"), game_path(id: @game.id, guess: "paper"), id: "paper-link", method: :patch %></li>
+      <li><%= link_to image_tag('scissors.svg', size: "100"),  game_path(id: @game.id, guess: "scissors"), id: "scissors-link", method: :patch %></li>
     </ul>
   </div>
   <div class="small-2 columns"></div>
 </div>
-
-<ul>
-  <li><%= link_to "Rock", game_path(id: @game.id, guess: "rock"), method: :patch %></li>
-  <li><%= link_to "Paper", game_path(id: @game.id, guess: "paper"), method: :patch %></li>
-  <li><%= link_to "Scissors", game_path(id: @game.id, guess: "scissors"), method: :patch %></li>
-</ul>

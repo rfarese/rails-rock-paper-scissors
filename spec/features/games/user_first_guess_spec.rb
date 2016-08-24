@@ -15,7 +15,7 @@ RSpec.feature "User creates first guess;", type: :feature do
   scenario "user chooses 'paper'" do
     sign_in(user)
     click_link "New Game"
-    click_link "Paper"
+    click_link "paper-link"
     updated_user = User.all.first
 
     expect(updated_user.guess).to eq("paper")

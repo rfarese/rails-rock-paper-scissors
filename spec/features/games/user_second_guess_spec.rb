@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "User creates first guess;", type: :feature do
+RSpec.feature "User creates multiple guesses;", type: :feature do
   let(:user) { FactoryGirl.create(:user) }
 
   scenario "user chooses 'rock', then 'paper'" do
@@ -11,7 +11,7 @@ RSpec.feature "User creates first guess;", type: :feature do
 
     expect(updated_user.guess).to eq("rock")
 
-    click_link "Paper"
+    click_link "paper-link"
     new_updated_user = User.all.first
 
     expect(new_updated_user.guess).to eq("paper")
@@ -20,7 +20,7 @@ RSpec.feature "User creates first guess;", type: :feature do
   scenario "user chooses 'paper', then chooses 'rock'" do
     sign_in(user)
     click_link "New Game"
-    click_link "Paper"
+    click_link "paper-link"
     updated_user = User.all.first
 
     expect(updated_user.guess).to eq("paper")
@@ -39,7 +39,7 @@ RSpec.feature "User creates first guess;", type: :feature do
 
     expect(updated_user.guess).to eq("scissors")
 
-    click_link "Paper"
+    click_link "paper-link"
     new_updated_user = User.all.first
 
     expect(new_updated_user.guess).to eq("paper")

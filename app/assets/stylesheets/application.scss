@@ -20,7 +20,13 @@
 }
 
 .game-menu li {
-  padding: 3em; 
+  padding: 3em;
+}
+
+.notice, .alert {
+  background-color: #678CCB;
+  color: white;
+  text-align: center;
 }
 
 // custom large 1135px and up
